@@ -1,7 +1,7 @@
 <?php include_once 'header.php'; ?>
 
 
-
+<h1 class="uk-text-center">Sign Up </h1>
 	<!-- Sing up form -->
 	<form action="inc/signup.inc.php" method="POST">
 	    <div class="uk-margin uk-text-center">

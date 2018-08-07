@@ -13,7 +13,7 @@ if(isset($_POST['loginsubmit'])){
 		header("Location: ../login.php?login=loginempty");
 		exit();
 	}else{
-		$sql = "SELECT * FROM users WHERE u_id = '$uid'";
+		$sql = "SELECT * FROM users WHERE u_id = '$uid' OR email = '$uid'";
 		$result = mysqli_query($conn, $sql);
 		$resultCheck = mysqli_num_rows($result);
 
