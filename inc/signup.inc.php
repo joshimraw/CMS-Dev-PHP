@@ -36,7 +36,7 @@
 						$sql = "INSERT INTO users (first_name, last_name, email, u_id, password) VALUES ('$firstName', '$lastName', '$email', '$userid', '$hashedPwd');";
 
 						mysqli_query($conn, $sql);
-						header("Location: ../signup.php?signup=success");
+						header("Location: ../index.php?signup=success");
 						exit();
 
 					}

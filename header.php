@@ -14,7 +14,7 @@
 
 		<nav class="uk-navbar-container uk-margin" uk-navbar>
 		    <div class="uk-navbar-left">
-		        <a class="uk-navbar-item uk-logo" href="#">Home</a>
+		        <a class="uk-navbar-item uk-logo" href="/">Home</a>
 			</div>	
 
 	        <div class="uk-navbar-right">
