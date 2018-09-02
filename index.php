@@ -1,15 +1,23 @@
-<?php require_once('header.php'); ?>
-
-<h1 class="uk-text-center">Welcome to Home page</h1>
-
-
 <?php 
-	if(isset($_SESSION['u_id'])){
-		echo "you are logged in!";
-	}else{
-		echo "not login";
-	}
+
+define('__CONFIG__', true);
+include_once 'inc/config.php';
+
 ?>
 
+  	<div class="uk-section uk-container">
+  		<?php 
+  			echo "Hello world. Today is: ";
+  			echo date("Y m d");
+  		?> 
+      
+  		<p>
+  			<a href="/login.php">Login</a> |
+  			<a href="/register.php">Register</a>
+  		</p>
+  	</div>
 
-<?php require_once('footer.php'); ?>
+
+
+  	<?php require_once "inc/footer.php"; ?> 
+
