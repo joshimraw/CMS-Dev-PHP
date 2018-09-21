@@ -1,10 +1,9 @@
-<?php
+<?php 
 	if(!defined('__CONFIG__')){
-		exit('you dont have config file');
+		exit('you dont have the config file');
 	}
 
-	include_once 'classes/DB.php';
-	
-	
-	DB::getConnection();
- ?>
+	require_once "classes/DB.php";
+	require_once "functions.php";
+	$con = DB::getConnection();
+?>

@@ -1,20 +1,16 @@
-<?php 
+    <?php 
+    define('__CONFIG__', true);
+    require_once "inc/header.php"; 
+    require_once "inc/config.php";
 
-define('__CONFIG__', true);
-include_once 'inc/config.php';
+    ?> 
 
-?>
-
-  	<div class="uk-section uk-container">
+	<div class="uk-section uk-container">
   		<?php 
   			echo "Hello world. Today is: ";
   			echo date("Y m d");
   		?> 
       
-  		<p>
-  			<a href="/login.php">Login</a> |
-  			<a href="/register.php">Register</a>
-  		</p>
   	</div>
 
 
