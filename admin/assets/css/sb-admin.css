@@ -8,7 +8,7 @@
 
 body {
     margin-top: 100px;
-    background-color: #222;
+    background-color: #eee;
 }
 
 @media(min-width:768px) {
@@ -122,7 +122,8 @@ ul.alert-dropdown {
         border: none;
         border-radius: 0;
         overflow-y: auto;
-        background-color: #222;
+        background-color: #fff;
+        margin-top: 50px;
     }
 
     .side-nav>li>a {
@@ -132,7 +133,7 @@ ul.alert-dropdown {
     .side-nav li a:hover,
     .side-nav li a:focus {
         outline: none;
-        background-color: #000 !important;
+        background-color: #fff !important;
     }
 }
 
@@ -148,7 +149,7 @@ ul.alert-dropdown {
 }
 
 .side-nav>li>ul>li>a:hover {
-    color: #fff;
+    color: #000;
 }
 
 /* Flot Chart Containers */

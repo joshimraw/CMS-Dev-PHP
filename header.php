@@ -1,3 +1,4 @@
+<?php include "inc/config.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,33 +12,43 @@
 
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/blog-home.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
 
 </head>
 
 <body>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
+    <nav class="navbar navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Start Bootstrap</a>
+                <a class="navbar-brand" href="/">
+                    <img src="images/logo.png">
+                </a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li> <a href="#">About</a></li>
-                    <li> <a href="#">Services</a></li>
-                    <li> <a href="#">Contact</a></li>
+                <ul class="nav navbar-nav pull-right">
+                    <?php
+                        $sql = "SELECT * FROM categories LIMIT 3";
+                        $result = mysqli_query($conn, $sql);
+
+                        if(mysqli_num_rows($result) > 0){
+                            while($category = mysqli_fetch_assoc($result)){
+                            $cat_title = $category['cat_title'];
+
+                            echo "<li><a href='#'>{$cat_title}</a></li>";
+                        }
+                        }else{
+                            echo "No Result";
+                        }
+                     ?>
+                     <li><a href="/about Me">About Me</a></li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
         </div>
     </nav>
+    <br>
         <!-- /.container -->
     <div class="container">

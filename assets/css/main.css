@@ -1,0 +1,14 @@
+
+.navbar-nav>li>a{
+	line-height: 33px !important;
+}
+.container-fluid{
+	background: #eee;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+}
+
+.navbar-brand > img{
+	width: 212px;
+	height: 48px;
+}

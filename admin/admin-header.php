@@ -1,3 +1,6 @@
+<?php 
+include "../inc/config.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,10 +12,11 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin </title>
+    <title>SmallF | Admin </title>
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/sb-admin.css" rel="stylesheet">
 
 </head>
 
 <body>
+
