@@ -30,7 +30,7 @@
             $e_content = $_POST['post-content'];
             $e_image = $_FILES['post-image']['name'];
             $e_image_tmp = $_FILES['post-image']['tmp_name'];
-            $destination = '../images'.$e_image;
+            $destination = '../images/'.$e_image;
 
             move_uploaded_file($e_image_tmp, $destination);
 
