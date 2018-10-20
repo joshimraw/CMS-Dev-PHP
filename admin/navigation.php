@@ -46,6 +46,14 @@
                     </li>
 
                     <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#demo1"><i class="fa fa-fw fa-arrows-v"></i> Users <i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="demo1" class="">
+                            <li><a href="users.php">All Users</a></li>
+                            <li><a href="add-user.php">Add User</a> </li>
+                        </ul>
+                    </li>
+
+                    <li>
                         <a href="javascript:;" data-toggle="collapse" data-target="#demo1"><i class="fa fa-fw fa-arrows-v"></i> Pages <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="demo1" class="">
                             <li><a href="pages.php">All Pages</a></li>

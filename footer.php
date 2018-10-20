@@ -2,7 +2,7 @@
 	<footer>
 		<div class="row">
 			<div class="col-lg-12">
-				<p class="pull-right">Copyright &copy; Your Website 2014</p>
+				<p class="pull-right">Copyright &copy; Jashim 2018</p>
 			</div>
 		</div>
 	</footer>
