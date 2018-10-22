@@ -39,16 +39,17 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            ADD NEW USER
+                            Update User Information
                         </h1>
                     </div>
                 </div>
            
                 <div class="row">
                     <div class="col-md-6">
-                        <form action="inc/add-d-user.php" method="POST" enctype="multipart/form-data">
+                        <form action="inc/update-d-user.php" method="POST" enctype="multipart/form-data">
                             <div class="form-group">
                                 <label for="">First Name</label>
+                                <input type="hidden" name="user-id" value="<?php echo $useredit_id ?>" class="form-control">
                                 <input type="text" name="fname" value="<?php echo $user_fname ?>" class="form-control">
                             </div>
                             <div class="form-group">
@@ -90,7 +91,7 @@
                                 
                                 </select>
                             </div>
-                            <button class="btn btn-primary" type="submit" name="adduser">Add User</button>
+                            <button class="btn btn-primary" type="submit" name="updateuser">Update User</button>
                         </form>
                     </div>
                 </div>
