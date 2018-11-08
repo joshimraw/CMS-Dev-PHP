@@ -1,4 +1,7 @@
-<?php include "admin-header.php"; ?>
+<?php 
+include_once("inc/config.php");
+include "admin-header.php";
+ ?>
     <div id="wrapper">
 <?php include "navigation.php"; 
     echo "<br>"; ?>

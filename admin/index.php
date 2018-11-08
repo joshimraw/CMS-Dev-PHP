@@ -1,4 +1,8 @@
-<?php include "admin-header.php"; ?>
+<?php 
+include "inc/config.php";
+include "admin-header.php";
+force_to_dashboard();
+ ?>
 
 
 

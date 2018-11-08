@@ -1,6 +1,13 @@
 <?php
+	
 	ob_start( );
-    ob_end_flush();
+	
+	if(!isset($_SESSION)){
+	session_start();
+	}
+
     
 	include "db.php";
+	include "functions.php";
+    // ob_end_flush();
  ?>

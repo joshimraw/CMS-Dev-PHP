@@ -1,17 +1,23 @@
-<?php include "admin-header.php"; 
+<?php 
+include "inc/config.php";
+include "admin-header.php"; 
 
-if(isset($_POST['submit'])){
+
+
+if(isset($_POST['add_cat'])){
     $cat_name = $_POST['cat-name'];
-        if($cat_name !== '' | !empty($cat_name)){
-            $sql = "INSERT INTO categories (cat_title) 
-            VALUES('$cat_name')";
-            $result = mysqli_query($conn, $sql);
+    $cat_status = $_POST['cat-status'];
+        if(!empty($cat_name)){
+
+            $asql = "INSERT INTO categories(cat_title, cat_status) 
+            VALUES('$cat_name', '$cat_status')";
+            $result = mysqli_query($conn, $asql);
             if($result){
                 echo "Added Successfully";
                 header("Location: /admin/categories.php");
                 
             }else{
-               die("Error");
+               die("Error" .mysqli_error());
             }
         }else{ echo "Filled should not be empty";}
     }else{
@@ -40,11 +46,19 @@ if(isset($_POST['submit'])){
 
                        <form action="" method="POST">
                         <div class="form-group">
-                            <label for="ad-category"></label>
-                            <input type="text" id="ad-category" class="form-control" name="cat-name">
+                            <label>Category Name</label>
+                            <input type="text" class="form-control" name="cat-name">
                         </div>
                         <div class="form-group">
-                            <input type="submit" class="btn btn-primary" name="submit" value="Add New Caterogy" >
+                            <label>Category Status</label>
+                            <select name="cat-status" class="form-control">
+                                <option></option>
+                                <option value="Published">Published</option>
+                                <option value="Draft">Draft</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-primary" type="submit" name="add_cat">Add Category</button>
                         </div>
                        </form>
                     </div>
@@ -58,6 +72,7 @@ if(isset($_POST['submit'])){
                                 <tr>
                                     <td>ID</td>
                                     <td>Category Name</td>
+                                    <td>Status</td>
                                     <td>Edit</td>
                                     <td>Delete</td>
                                 </tr>
@@ -71,6 +86,7 @@ if(isset($_POST['submit'])){
                                     <tr>
                                         <td><?php echo $category['cat_id']; ?></td>
                                         <td><?php echo $category['cat_title']; ?></td>
+                                        <td><?php echo $category['cat_status']; ?></td>
                                         <td><a href="">Edit</a></td>
                                         <td><a href="">Delete</a></td>
                                         
